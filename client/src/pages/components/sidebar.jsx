@@ -149,7 +149,7 @@ function Sidebar() {
                     id={"workspace_" + list._id}
                     key={list._id}
                     onClick={() => workspace_handler(list._id)}
-                    style={{ color: "#fff" }}
+                    style={{ color: "#fff", zIndex: 1 }}
                   >
                     <i
                       className="fas fa-circle"

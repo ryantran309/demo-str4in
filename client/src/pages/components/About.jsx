@@ -108,9 +108,19 @@ function AboutUsComponent() {
               style={{ transition: ".5s" }}
             >
               <img src={`${admins[index]}`} alt={name} className="person-img" />
-              <h4>{name}</h4>
+              <h4
+                style={{
+                  fontWeight: 700,
+                  letterSpacing: ".05rem",
+                  color: "rgb(80, 70, 229)",
+                }}
+              >
+                {name}
+              </h4>
               <p className="title">{title}</p>
-              <p className="text">{quote}</p>
+              <p className="text" style={{ fontWeight: 600 }}>
+                {quote}
+              </p>
             </article>
           );
         })}
