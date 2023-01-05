@@ -1,0 +1,11 @@
+.header_search_field{
+    background-color: #ffffff !important;
+    border: 1px solid #dfdfdf !important;
+    border-left: 0 !important;
+    border-radius: 0 10px 10px 0 !important;
+}
+.header_search_field_icon{
+    border-radius: 10px 0 0 10px !important;
+    background-color: #ffffff;
+    border-right: 0 !important;
+}
