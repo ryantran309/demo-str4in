@@ -60,6 +60,8 @@ function Sidebar() {
               letterSpacing: ".2rem",
               animation: "2s emergeAnimation ease-in-out",
               color: "#fff",
+              position: 'relative',
+              left: '-1rem'
             }}
           >
             STR<span style={{ color: "#38E54D" }}>4</span>IN
@@ -72,8 +74,10 @@ function Sidebar() {
               fontSize: "2rem",
               position: "absolute",
               left: "15rem",
+              top: '3.4rem',
               cursor: "pointer",
               color: "#fff",
+              zIndex: '1'
             }}
             onClick={toggleSideBar}
           ></i>
