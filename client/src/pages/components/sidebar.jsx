@@ -56,11 +56,13 @@ function Sidebar() {
             className="mr-3"
             style={{
               fontSize: "2rem",
-              fontWeight: 800,
+              fontWeight: 600,
+              letterSpacing: ".2rem",
               animation: "2s emergeAnimation ease-in-out",
+              color: "#fff",
             }}
           >
-            STR<span style={{ color: "green" }}>4</span>IN
+            STR<span style={{ color: "#38E54D" }}>4</span>IN
           </h4>
           <i
             className="fas fa-bars fa-lg"
@@ -71,6 +73,7 @@ function Sidebar() {
               position: "absolute",
               left: "15rem",
               cursor: "pointer",
+              color: "#fff",
             }}
             onClick={toggleSideBar}
           ></i>
@@ -91,7 +94,7 @@ function Sidebar() {
             className="font-weight-bold mb-3"
             key="dashboard"
           >
-            <Link to="/">
+            <Link to="/" style={{ color: "#fff", fontWeight: 500 }}>
               <i className="fas fa-tachometer-alt"></i> Dashboard
             </Link>
           </li>
@@ -107,6 +110,7 @@ function Sidebar() {
                 top: "-0.8rem",
                 left: "9rem",
                 fontSize: "1.4rem",
+                color: "#fff",
               }}
               data-toggle="collapse"
               data-target="#workspace_list"
@@ -118,6 +122,7 @@ function Sidebar() {
                 top: "-0.8rem",
                 left: "10rem",
                 backgroundColor: "transparent",
+                color: "#fff",
               }}
               data-toggle="modal"
               data-target="#add_workspace_modal"
@@ -140,6 +145,7 @@ function Sidebar() {
                     id={"workspace_" + list._id}
                     key={list._id}
                     onClick={() => workspace_handler(list._id)}
+                    style={{ color: "#fff" }}
                   >
                     <i
                       className="fas fa-circle"
@@ -163,7 +169,7 @@ function Sidebar() {
             className="font-weight-bold mb-3"
             key="about"
           >
-            <Link to="/guide">
+            <Link to="/guide" style={{ color: "#fff", fontWeight: 500 }}>
               <i className="fas fa-users"></i> Guide
             </Link>
           </li>
@@ -172,12 +178,15 @@ function Sidebar() {
             className="font-weight-bold mb-3"
             key="about"
           >
-            <Link to="/about">
+            <Link to="/about" style={{ color: "#fff", fontWeight: 500 }}>
               <i className="fas fa-users"></i> About Us
             </Link>
           </li>
           <li
-            style={{ animation: "2s emergeAnimation ease-in-out" }}
+            style={{
+              animation: "2s emergeAnimation ease-in-out",
+              color: "#000",
+            }}
             className="text-center mt-5"
           >
             <button
@@ -189,6 +198,11 @@ function Sidebar() {
                 localStorage.removeItem("up");
                 localStorage.removeItem("ws");
                 navigate("/login");
+              }}
+              style={{
+                backgroundColor: "#E0144C",
+                position: "relative",
+                left: "-1rem",
               }}
             >
               Log out
@@ -206,7 +220,10 @@ function Sidebar() {
             className="modal-dialog modal-dialog-centered modal-sm"
             role="document"
           >
-            <div className="modal-content" style={{ padding: "8px 16px" }}>
+            <div
+              className="modal-content"
+              style={{ display: "block", padding: "40px 16px" }}
+            >
               <div className="modal-body p-1">
                 <input
                   type="text"
@@ -215,6 +232,7 @@ function Sidebar() {
                   placeholder="Workspace name"
                   value={workspace_field}
                   onChange={(e) => setWorkspace_field(e.target.value)}
+                  style={{ padding: "8px 16px", border: "none" }}
                 />
               </div>
               <div className="modal-footer d-flex justify-content-between p-0">
@@ -222,6 +240,13 @@ function Sidebar() {
                   type="button"
                   className="btn btn-secondary btn-sm"
                   data-dismiss="modal"
+                  style={{
+                    padding: "8px 16px",
+                    animation: "2s emergeAnimation ease-in-out",
+                    position: "relative",
+                    left: "2rem",
+                    top: "1rem",
+                  }}
                 >
                   Close
                 </button>
@@ -229,6 +254,13 @@ function Sidebar() {
                   type="button"
                   className="btn btn-success btn-sm"
                   onClick={add_workspace}
+                  style={{
+                    padding: "8px 16px",
+                    animation: "2s emergeAnimation ease-in-out",
+                    position: "relative",
+                    right: "2rem",
+                    top: "1rem",
+                  }}
                 >
                   Add
                 </button>

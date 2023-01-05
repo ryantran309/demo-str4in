@@ -21,6 +21,7 @@ function Dashboard() {
             width: "24%",
             borderRight: "1px solid #d1d1d1",
             animation: "2s emergeAnimation ease-in-out",
+            backgroundColor: "rgb(80, 70, 229)",
           }}
         >
           <Sidebar />

@@ -78,16 +78,32 @@ function Header() {
   return (
     <div className="col-12 mt-5">
       <div className="row">
-        <div className="col-10 mx-auto">
-          <div className="d-flex justify-content-between">
+        <div className="col-10 mx-auto" style={{ border: "none" }}>
+          <div className="d-flex justify-content-between" c>
             <div
               className="mb-3"
-              style={{ animation: "2s anim-lineUp ease-in-out" }}
+              style={{
+                animation: "2s anim-lineUp ease-in-out",
+                background: "transparent",
+              }}
             >
-              <div className="input-group" style={{ width: "400px" }}>
-                <div className="input-group-prepend">
-                  <span className="input-group-text header_search_field_icon">
-                    <i className="fas fa-search"></i>
+              <div
+                className="input-group"
+                style={{
+                  width: "400px",
+                  position: "relative",
+                  borderRadius: "8px",
+                  border: "none",
+                  animation: "2s emergeAnimation ease-in-out",
+                  background: "transparent",
+                }}
+              >
+                <div className="input-group-prepend" style={{ border: "none" }}>
+                  <span
+                    className="input-group-text header_search_field_icon"
+                    style={{ border: "none" }}
+                  >
+                    <i className="fas fa-search" style={{position: 'relative', fontSize: '1.2rem', left: '3rem'}}></i>
                   </span>
                 </div>
                 <input
@@ -97,6 +113,14 @@ function Header() {
                   onKeyUp={searchQuery_handler}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   value={searchQuery}
+                  style={{
+                    border: "none",
+                    background: "transparent",
+                    boxShadow:
+                      "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset",
+                    padding: "20px 24px 20px 48px",
+										fontSize: '.95rem'
+                  }}
                 />
               </div>
               <ul
@@ -108,7 +132,12 @@ function Header() {
                   return (
                     <Link to="/view" state={item} key={index}>
                       <li className="list-group-item d-flex flex-column">
-                        <div className="text-center mb-2">{item.title}</div>
+                        <div className="text-center mb-2">
+                          <span style={{ color: "#17B794", fontWeight: 600 }}>
+                            Your task:
+                          </span>{" "}
+                          {item.title}
+                        </div>
                         <div className="d-flex justify-content-between">
                           <small>{statusName[item.status]}</small>
                           <small>{item.due_date}</small>
@@ -193,7 +222,7 @@ function Header() {
                 }}
               >
                 {userName ? userName : "Anonymous"}
-                <i className="fas fa-angle-down rotate-icon align-middle"></i>
+                <i style={{fontSize: '1.2rem', position: 'relative', left: '1rem'}} className="fas fa-angle-down rotate-icon align-middle"></i>
               </Link>
             </div>
           </div>
