@@ -5,7 +5,7 @@ import ViewTodo from "./pages/ViewTodo";
 import AddTodo from "./pages/AddTodo";
 import UpdateTodo from "./pages/UpdateTodo";
 import DeleteTodo from "./pages/DeleteTodo";
-import About from "./pages/About";
+import About from "./pages/components/About";
 import Profile from "./pages/Profile";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
