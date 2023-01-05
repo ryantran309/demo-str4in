@@ -51,6 +51,7 @@ function Sidebar() {
     }
     return (
       <div>
+							{/* zIndex: 1 */}
         <div className="d-flex align-items-baseline justify-content-center py-5">
           <h4
             className="mr-3"
@@ -149,7 +150,7 @@ function Sidebar() {
                     id={"workspace_" + list._id}
                     key={list._id}
                     onClick={() => workspace_handler(list._id)}
-                    style={{ color: "#fff", zIndex: 1 }}
+                    style={{ color: "#fff", zIndex: 4 }}
                   >
                     <i
                       className="fas fa-circle"
