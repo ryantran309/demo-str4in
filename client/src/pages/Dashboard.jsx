@@ -14,19 +14,26 @@ function Dashboard() {
         });
     }, []);
     return (
-        <div className="d-flex" style={{height: "100vh"}}>
-            <div style={{width: "12%", borderRight: "1px solid #d1d1d1"}}>
-                <Sidebar />
-            </div>
-            <div style={{width: "88%", padding: "0 50px 0 30px"}}>
-            <div className="row">
-                <Header />
-                <NotStarted />
-                <InProgress />
-                <Complete />
-            </div>
-            </div>
+      <div className="d-flex" style={{ height: "100vh" }}>
+        <div
+          className="main-sidebar"
+          style={{
+            width: "24%",
+            borderRight: "1px solid #d1d1d1",
+            animation: "2s emergeAnimation ease-in-out",
+          }}
+        >
+          <Sidebar />
         </div>
+        <div style={{ width: "88%", padding: "0 50px 0 30px" }}>
+          <div className="row">
+            <Header />
+            <NotStarted />
+            <InProgress />
+            <Complete />
+          </div>
+        </div>
+      </div>
     );
 }
 

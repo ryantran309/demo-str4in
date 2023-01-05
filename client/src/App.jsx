@@ -9,20 +9,79 @@ import About from "./pages/About";
 import Profile from "./pages/Profile";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import GuidePage from "./pages/GuidePage";
 
 function App() {
     return (
-        <Routes>
-            <Route path="/" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
-            <Route path="/view" element={<PrivateRoute><ViewTodo /></PrivateRoute>} />
-            <Route path="/add" element={<PrivateRoute><AddTodo /></PrivateRoute>} />
-            <Route path="/update" element={<PrivateRoute><UpdateTodo /></PrivateRoute>} />
-            <Route path="/delete" element={<PrivateRoute><DeleteTodo /></PrivateRoute>} />
-            <Route path="/about" element={<PrivateRoute><About /></PrivateRoute>} />
-            <Route path="/my-profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-        </Routes>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <PrivateRoute>
+              <Dashboard />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/view"
+          element={
+            <PrivateRoute>
+              <ViewTodo />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/add"
+          element={
+            <PrivateRoute>
+              <AddTodo />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/update"
+          element={
+            <PrivateRoute>
+              <UpdateTodo />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/delete"
+          element={
+            <PrivateRoute>
+              <DeleteTodo />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/guide"
+          element={
+            <PrivateRoute>
+              <GuidePage />
+            </PrivateRoute>
+          }
+        />
+
+        <Route
+          path="/about"
+          element={
+            <PrivateRoute>
+              <About />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/my-profile"
+          element={
+            <PrivateRoute>
+              <Profile />
+            </PrivateRoute>
+          }
+        />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
     );
 }
 
