@@ -6,7 +6,7 @@ import Sidebar from "./components/sidebar";
 import "./components/Guide.css";
 import AboutUsComponent from "./components/About";
 
-export default function GuidePage() {
+export default function AboutUsPage() {
   return (
     <>
       <div className="d-flex" style={{ height: "100vh" }}>

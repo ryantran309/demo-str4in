@@ -26,16 +26,16 @@ function AboutUsComponent() {
     {
       id: 3,
       name: "Tran Anh Bao",
-      title: "Backend, UI design, Operation Director",
+      title: "Backend, Operation Director",
       quote:
         "If you want to grow you have to do something different from the majority of people.",
     },
     {
       id: 4,
-      name: "susan andersen",
-      title: "the boss",
+      name: "Le Anh Dung",
+      title: "Backend development and system design.",
       quote:
-        "Marfa af yr 3 wolf moon kogi, readymade distillery asymmetrical seitan kale chips fingerstache cloud bread mustache twee messenger bag. ",
+        "Success is not final; failure is not fatal: it is the courage to continue that counts.",
     },
   ]);
   const [index, setIndex] = React.useState(0);
