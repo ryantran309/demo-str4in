@@ -8,6 +8,7 @@ const Notification = require("./models/Notification");
 const userRoutes = require("./routes/user");
 const todoRoutes = require("./routes/todo");
 const workspaceRoutes = require("./routes/workspace");
+const bodyParser = require("body-parser");
 
 const app = express();
 app.use(cors({
@@ -16,6 +17,7 @@ app.use(cors({
 }));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
+app.use(bodyParser.json());
 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
