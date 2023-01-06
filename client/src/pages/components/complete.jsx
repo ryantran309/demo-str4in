@@ -89,6 +89,7 @@ function Complete() {
                       boxShadow:
                         "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset",
                       animation: "2s emergeAnimation ease-in-out",
+											width: '250px'
                     }}
                   >
                     <div className="d-flex flex-column mx-3 mt-2">
@@ -96,7 +97,7 @@ function Complete() {
                       <span>{task.title}</span>
                     </div>
                     <hr className="mt-1 mb-0" />
-                    <div className="mx-3 my-2">
+                    <div className="mx-3 my-2" style={{padding: '8px 16px'}}>
                       <img
                         src={task.assignee.avatar}
                         alt="profile img"
