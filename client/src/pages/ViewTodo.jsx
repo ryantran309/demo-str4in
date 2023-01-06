@@ -56,7 +56,7 @@ function ViewTodo() {
                   <Link to="/update" state={location.state}>
                     <i className="fas fa-pen-alt mr-5"></i>
                   </Link>
-                  <Calendar minDate={new Date()} value={defaultDate} maxDate={new Date(due_date)} />
+                  <Calendar minDate={new Date()} value={defaultDate} maxDate={new Date(due_date)} locale='ENG' />
                 </div>
               </div>
               <div className="row mt-4 px-3">
