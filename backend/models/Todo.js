@@ -18,9 +18,10 @@ const TodoSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    // due_date: {
-    //     type: String
-    // },
+    due_date: {
+        type: String,
+        default: moment(Date.now()).format("MM-DD-YYYY")
+    },
     workspace: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "workspaces",

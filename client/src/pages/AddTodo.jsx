@@ -18,7 +18,7 @@ function AddTodo() {
         description: description,
         assignee: localStorage.getItem("token"),
         status: status,
-        // ssssss: dueDate,
+        due_date: dueDate,
         workspace: workspace,
       })
       .then((res) => {
