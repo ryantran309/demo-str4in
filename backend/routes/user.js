@@ -1,10 +1,13 @@
 const router = require("express").Router();
-const {register, login, user_data, user_update, password_modifier} = require("../controllers/user");
+const {workspace_todos, get_todo, add_todo, update_todo_title, update_todo_description, status_dnd, delete_todo, search_todo} = require("../controllers/todo");
 
-router.post("/register", register);
-router.post("/login", login);
-router.post("/user_data", user_data);
-router.post("/user_update", user_update);
-router.post("/password_modifier", password_modifier);
+router.get("/workspace_todos", workspace_todos);
+router.get("/get_todo", get_todo);
+router.post("/add_todo", add_todo);
+router.post("/update_todo_title", update_todo_title);
+router.post("/update_todo_description", update_todo_description);
+router.post("/status_dnd", status_dnd);
+router.post("/delete_todo", delete_todo);
+router.get("/search_todo", search_todo);
 
 module.exports = router;

@@ -30,9 +30,7 @@ const get_todo = (req, res) => {
 };
 
 const add_todo = (req, res) => {
-  const { title, description, assignee, status, workspace } =
-    req.body;
-
+  const { title, description, assignee, status, workspace } = req.body;
   const id = jwt.verify(assignee, process.env.JWT_SECRET).id;
   Todo.create({ title, description, assignee: id, status, workspace })
     .then((data) => {

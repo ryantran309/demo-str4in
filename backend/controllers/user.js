@@ -69,7 +69,7 @@ const user_data = async (req, res) => {
 };
 
 const user_update = async (req, res) => {
-  const { id, first_name, last_name, email, gender, avatar } = req.body;
+  const { id, first_name, last_name, email, gender } = req.body;
   await User.findByIdAndUpdate(id, {
     first_name,
     last_name,
