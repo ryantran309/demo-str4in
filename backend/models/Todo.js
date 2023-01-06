@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const moment = require("moment");
+// const moment = require("moment");
 
 const TodoSchema = new mongoose.Schema({
     title: {
@@ -18,10 +18,9 @@ const TodoSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    due_date: {
-        type: String,
-        default: moment(Date.now()).format("MM/DD/YYYY")
-    },
+    // due_date: {
+    //     type: String
+    // },
     workspace: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "workspaces",
