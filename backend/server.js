@@ -11,6 +11,7 @@ const todoRoutes = require("./routes/todo");
 const workspaceRoutes = require("./routes/workspace");
 
 const app = express();
+
 app.use(
   cors({
     origin: ["http://localhost:3000", "https://str4in.netlify.app"],
