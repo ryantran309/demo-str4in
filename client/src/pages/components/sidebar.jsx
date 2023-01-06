@@ -49,9 +49,37 @@ function Sidebar() {
         
         sideBar.classList.toggle('hidden');
     }
+
+    function handleHiddenDashboardList(e){
+        e.preventDefault();
+        const dashboard = e.currentTarget.parentElement.parentElement;
+        const downIcon = dashboard.querySelector(".rotate-icon");
+        const plusIcon = dashboard.querySelector(".fa-plus");
+        const workspaceList = dashboard.querySelector("#workspace_list")
+
+        downIcon.classList.add("hidden");
+        plusIcon.classList.add("hidden");
+        workspaceList.classList.add("hidden");
+    }
+
+    function handleShowDashboardList(e) {
+      e.preventDefault();
+    //   console.log(e.currentTarget.parentElement.parentElement);
+      const dashboard = e.currentTarget.parentElement.parentElement;
+      const downIcon = dashboard.querySelector(".rotate-icon");
+      const plusIcon = dashboard.querySelector(".fa-plus");
+      const workspaceList = dashboard.querySelector("#workspace_list");
+			
+			downIcon.classList.remove("hidden");
+      plusIcon.classList.remove("hidden");
+      workspaceList.classList.remove("hidden");
+    //   downIcon.style.display = "block";
+    //   plusIcon.style.display = "block";
+    //   workspaceList.style.display = "block";
+    }
     return (
       <div>
-							{/* zIndex: 1 */}
+        {/* zIndex: 1 */}
         <div className="d-flex align-items-baseline justify-content-center py-5">
           <h4
             className="mr-3"
@@ -61,8 +89,9 @@ function Sidebar() {
               letterSpacing: ".2rem",
               animation: "2s emergeAnimation ease-in-out",
               color: "#fff",
-              position: 'relative',
-              left: '-1rem'
+              position: "relative",
+              left: "-1rem",
+							zIndex: 1000
             }}
           >
             STR<span style={{ color: "#38E54D" }}>4</span>IN
@@ -75,10 +104,10 @@ function Sidebar() {
               fontSize: "2rem",
               position: "absolute",
               left: "15rem",
-              top: '3.4rem',
+              top: "3.4rem",
               cursor: "pointer",
               color: "#fff",
-              zIndex: '1'
+              zIndex: "1",
             }}
             onClick={toggleSideBar}
           ></i>
@@ -99,12 +128,16 @@ function Sidebar() {
             className="font-weight-bold mb-3"
             key="dashboard"
           >
-            <Link to="/" style={{ color: "#fff", fontWeight: 500 }}>
+            <Link
+              // onClick={handleShowDashboardList}
+              to="/"
+              style={{ color: "#fff", fontWeight: 500 }}
+            >
               <i className="fas fa-tachometer-alt"></i> Dashboard
             </Link>
           </li>
           <li
-            style={{ animation: "2s emergeAnimation ease-in-out" }}
+            style={{ animation: "2s emergeAnimation ease-in-out", transition: ".5s" }}
             className="font-weight-bold mb-3"
             key="workspace"
           >
@@ -116,6 +149,7 @@ function Sidebar() {
                 left: "9rem",
                 fontSize: "1.4rem",
                 color: "#fff",
+              
               }}
               data-toggle="collapse"
               data-target="#workspace_list"
@@ -174,7 +208,16 @@ function Sidebar() {
             className="font-weight-bold mb-3"
             key="about"
           >
-            <Link to="/guide" style={{ color: "#fff", fontWeight: 500 }}>
+            <Link
+              to="/guide"
+              style={{
+                color: "#fff",
+                fontWeight: 500,
+                position: "relative",
+                top: "2rem",
+              }}
+						// onClick={handleHiddenDashboardList}
+            >
               <i className="fas fa-users"></i> Guide
             </Link>
           </li>
@@ -183,7 +226,15 @@ function Sidebar() {
             className="font-weight-bold mb-3"
             key="about"
           >
-            <Link to="/about" style={{ color: "#fff", fontWeight: 500 }}>
+            <Link
+              to="/about"
+              style={{
+                color: "#fff",
+                fontWeight: 500,
+                position: "relative",
+                top: "2rem",
+              }}
+            >
               <i className="fas fa-users"></i> About Us
             </Link>
           </li>

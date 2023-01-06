@@ -37,3 +37,13 @@ a{
 .workspace_list_h:hover{
     color: #242f9b;
 }
+
+.rotate-icon.hidden{
+	display: none;
+}
+.fa-plus.hidden{
+	display: none;
+}
+#workspace_list.hidden{
+	display: none;
+}

@@ -5,6 +5,7 @@ import NonSearchingHeader from "./components/NonSearchingHeader";
 import Sidebar from "./components/sidebar";
 import "./components/Guide.css";
 import AboutUsComponent from "./components/About";
+import SideBarNoWs from "./components/SideBarNoWs";
 
 export default function AboutUsPage() {
   return (
@@ -20,7 +21,7 @@ export default function AboutUsPage() {
             
           }}
         >
-          <Sidebar />
+          <SideBarNoWs />
         </div>
         <div style={{ width: "88%", padding: "0 50px 0 30px" }}>
           <div className="row">
