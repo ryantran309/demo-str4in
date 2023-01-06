@@ -229,13 +229,13 @@ function Register() {
                   </button>
                 </div>
               </div>
-              <div className="col-12 d-none" id="reg_failed_msg">
+            	<div className="col-12 d-none" id="reg_failed_msg">
                 <div
                   className="alert alert-danger alert-dismissible fade show"
                   // style={{position: 'absolute'}}
                   role="alert"
                 >
-                  Registration failed! Please try again later...
+                  Registration failed, account maybe exist or something wrong in your registration! Please try again later...
                   <button type="button" className="close" data-dismiss="alert">
                     <span aria-hidden="true">&times;</span>
                   </button>
